@@ -123,6 +123,60 @@ RaspTemp/fast:
 	$(MAKE) -f CMakeFiles/RaspTemp.dir/build.make CMakeFiles/RaspTemp.dir/build
 .PHONY : RaspTemp/fast
 
+Sources/ConfigFile.o: Sources/ConfigFile.cpp.o
+
+.PHONY : Sources/ConfigFile.o
+
+# target to build an object file
+Sources/ConfigFile.cpp.o:
+	$(MAKE) -f CMakeFiles/RaspTemp.dir/build.make CMakeFiles/RaspTemp.dir/Sources/ConfigFile.cpp.o
+.PHONY : Sources/ConfigFile.cpp.o
+
+Sources/ConfigFile.i: Sources/ConfigFile.cpp.i
+
+.PHONY : Sources/ConfigFile.i
+
+# target to preprocess a source file
+Sources/ConfigFile.cpp.i:
+	$(MAKE) -f CMakeFiles/RaspTemp.dir/build.make CMakeFiles/RaspTemp.dir/Sources/ConfigFile.cpp.i
+.PHONY : Sources/ConfigFile.cpp.i
+
+Sources/ConfigFile.s: Sources/ConfigFile.cpp.s
+
+.PHONY : Sources/ConfigFile.s
+
+# target to generate assembly for a file
+Sources/ConfigFile.cpp.s:
+	$(MAKE) -f CMakeFiles/RaspTemp.dir/build.make CMakeFiles/RaspTemp.dir/Sources/ConfigFile.cpp.s
+.PHONY : Sources/ConfigFile.cpp.s
+
+Sources/MysqlTemper.o: Sources/MysqlTemper.cpp.o
+
+.PHONY : Sources/MysqlTemper.o
+
+# target to build an object file
+Sources/MysqlTemper.cpp.o:
+	$(MAKE) -f CMakeFiles/RaspTemp.dir/build.make CMakeFiles/RaspTemp.dir/Sources/MysqlTemper.cpp.o
+.PHONY : Sources/MysqlTemper.cpp.o
+
+Sources/MysqlTemper.i: Sources/MysqlTemper.cpp.i
+
+.PHONY : Sources/MysqlTemper.i
+
+# target to preprocess a source file
+Sources/MysqlTemper.cpp.i:
+	$(MAKE) -f CMakeFiles/RaspTemp.dir/build.make CMakeFiles/RaspTemp.dir/Sources/MysqlTemper.cpp.i
+.PHONY : Sources/MysqlTemper.cpp.i
+
+Sources/MysqlTemper.s: Sources/MysqlTemper.cpp.s
+
+.PHONY : Sources/MysqlTemper.s
+
+# target to generate assembly for a file
+Sources/MysqlTemper.cpp.s:
+	$(MAKE) -f CMakeFiles/RaspTemp.dir/build.make CMakeFiles/RaspTemp.dir/Sources/MysqlTemper.cpp.s
+.PHONY : Sources/MysqlTemper.cpp.s
+
 Sources/main.o: Sources/main.cpp.o
 
 .PHONY : Sources/main.o
@@ -186,6 +240,12 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... RaspTemp"
+	@echo "... Sources/ConfigFile.o"
+	@echo "... Sources/ConfigFile.i"
+	@echo "... Sources/ConfigFile.s"
+	@echo "... Sources/MysqlTemper.o"
+	@echo "... Sources/MysqlTemper.i"
+	@echo "... Sources/MysqlTemper.s"
 	@echo "... Sources/main.o"
 	@echo "... Sources/main.i"
 	@echo "... Sources/main.s"
