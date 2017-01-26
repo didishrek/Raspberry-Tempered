@@ -26,6 +26,7 @@ private:
     std::string dev_schemas;
 
     std::string location;
+    std::string prodordev;
 public:
 
     ConfigFile();
@@ -50,8 +51,9 @@ public:
 
     const std::string &getLocation() const;
 
-    friend std::ostream &operator<<(std::ostream &os, const ConfigFile &file);
+    const std::string &getProdordev() const;
 
+    friend std::ostream &operator<<(std::ostream &os, const ConfigFile &file);
 };
 
 

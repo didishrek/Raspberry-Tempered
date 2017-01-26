@@ -14,7 +14,11 @@ int main(void) {
     cfg.open_and_read();
     std::cout << cfg << std::endl;
 
-    MysqlTemper mysqlTemper(cfg.getDev_login().c_str(), cfg.getDev_password().c_str(), cfg.getDev_address().c_str(), cfg.getDev_schemas().c_str());
+    MysqlTemper mysqlTemper;
+    if (cfg.getProdordev().compare("dev") == 0)
+        mysqlTemper.configure(cfg.getDev_login().c_str(), cfg.getDev_password().c_str(), cfg.getDev_address().c_str(), cfg.getDev_schemas().c_str());
+    else
+        mysqlTemper.configure(cfg.getProd_login().c_str(), cfg.getProd_password().c_str(), cfg.getProd_address().c_str(), cfg.getProd_schemas().c_str());
 
     temper.enumerate_devices();
 

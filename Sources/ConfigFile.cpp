@@ -24,6 +24,7 @@ void ConfigFile::open_and_read() {
         dev.lookupValue("schemas", dev_schemas);
 
         sql.lookupValue("location", location);
+        sql.lookupValue("prodordev", prodordev);
     }
     catch(const libconfig::FileIOException &fioex)
     {
@@ -79,14 +80,18 @@ const std::string &ConfigFile::getLocation() const {
     return location;
 }
 
+ConfigFile::ConfigFile() {
+    path_file = "/usr/share/RaspTemp/password_temper.cfg";
+}
+
+const std::string &ConfigFile::getProdordev() const {
+    return prodordev;
+}
+
 std::ostream &operator<<(std::ostream &os, const ConfigFile &file) {
     os << "prod_login: " << file.prod_login << " prod_password: " << file.prod_password << " prod_address: "
        << file.prod_address << " prod_schemas: " << file.prod_schemas << " dev_login: " << file.dev_login
        << " dev_password: " << file.dev_password << " dev_address: " << file.dev_address << " dev_schemas: "
-       << file.dev_schemas << " location: " << file.location;
+       << file.dev_schemas << " location: " << file.location << " prodordev: " << file.prodordev;
     return os;
-}
-
-ConfigFile::ConfigFile() {
-    path_file = "/usr/share/RaspTemp/password_temper.cfg";
 }

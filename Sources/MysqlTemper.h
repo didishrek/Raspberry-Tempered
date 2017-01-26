@@ -22,7 +22,7 @@ private :
 
 
 public :
-    MysqlTemper(const char *login, const char *password, const char *address, const char *schemas);
+    void configure(const char *login, const char *password, const char *address, const char *schemas);
 
     void add_temp(const char * position, float temp1, float temp2);
 };

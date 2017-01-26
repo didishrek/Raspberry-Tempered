@@ -21,7 +21,7 @@ void Temper::finalization(){
 void Temper::update_devices_list() {
     try {
         if (this->list_devices_enumerated != NULL){
-            tempered_free_device_list(this->list_devices_enumerated);
+            //tempered_free_device_list(this->list_devices_enumerated);
             this->list_devices_enumerated = NULL;
         }
         this->list_devices_enumerated = tempered_enumerate( &this->error );

@@ -5,9 +5,6 @@
 #include "MysqlTemper.h"
 
 
-MysqlTemper::MysqlTemper(const char *login, const char *password, const char *address, const char *schemas) : login(
-        login), password(password), address(address), schemas(schemas) {}
-
 void MysqlTemper::add_temp(const char *location, float temp1, float temp2) {
     try {
         sql::Driver *driver;
@@ -38,3 +35,11 @@ void MysqlTemper::add_temp(const char *location, float temp1, float temp2) {
         cout << ", SQLState: " << e.getSQLState() << " )" << endl;
     }
 }
+
+void MysqlTemper::configure(const char *login, const char *password, const char *address, const char *schemas) {
+    this->login = login;
+    this->password = password;
+    this->address = address;
+    this->schemas = schemas;
+}
+
