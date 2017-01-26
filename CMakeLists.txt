@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.5)
+cmake_minimum_required(VERSION 3.0)
 project(RaspTemp)
 
 set(CMAKE_CXX_STANDARD 11)
@@ -18,3 +18,6 @@ add_executable(RaspTemp ${SOURCE_FILES})
 target_link_libraries(RaspTemp ${TEMPERED} ${TEMPEREDUTIL} ${HIDAPI_LIB} ${LIBCONFIG} ${LIBMYSQL})
 
 install(TARGETS RaspTemp DESTINATION /usr/bin)
+install(FILES password_temper_exemple.cfg
+        DESTINATION /usr/share/RaspTemp
+        RENAME password_temper.cfg)

@@ -36,6 +36,10 @@ void ConfigFile::open_and_read() {
     }
     catch(const libconfig::SettingNotFoundException &nfex)
     {
+        std::cerr << "Setting not Found : " << nfex.what() << std::endl;
+    }
+    catch(std::exception e){
+        std::cerr << "Exception found : " << e.what() << std::endl;
     }
 }
 
