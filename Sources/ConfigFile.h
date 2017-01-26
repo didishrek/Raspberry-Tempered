@@ -12,7 +12,7 @@
 
 class ConfigFile {
 private:
-    std::string path_file = "/usr/share/RaspTemp/password_temper.cfg";
+    std::string path_file;
     libconfig::Config cfg;
 
     std::string prod_login;
@@ -27,6 +27,8 @@ private:
 
     std::string location;
 public:
+
+    ConfigFile();
 
     void open_and_read();
 

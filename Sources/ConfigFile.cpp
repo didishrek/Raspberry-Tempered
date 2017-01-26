@@ -86,3 +86,7 @@ std::ostream &operator<<(std::ostream &os, const ConfigFile &file) {
        << file.dev_schemas << " location: " << file.location;
     return os;
 }
+
+ConfigFile::ConfigFile() {
+    path_file = "/usr/share/RaspTemp/password_temper.cfg";
+}
